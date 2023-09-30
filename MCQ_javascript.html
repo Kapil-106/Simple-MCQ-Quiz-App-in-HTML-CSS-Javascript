@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple MCQ App in Javascript</title>
+    <style>
+        body{
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        h1{
+           text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <form action="#" name="question_paper">
+     <h1>CODEWORK</h1>   
+    <h4>Simple MCQ Quiz App in HTML,CSS & Javascript</h4>
+    <small>[ Note : Passing Score is minimum 3 and above ]</small>
+
+    
+    <h4>Q.1 Capital of India?</h4>
+    <input type="radio" name="que1" id="" value="mumbai"> Mumbai
+    <input type="radio" name="que1" id="" value="pune"> Pune
+    <input type="radio" name="que1" id="" value="delhi"> Delhi
+    <input type="radio" name="que1" id="" value="punjab"> Punjab
+
+    <h4>Q.2 What is the National sports of India?</h4>
+    <input type="radio" name="que2" id="" value="cricket"> Cricket
+    <input type="radio" name="que2" id="" value="badminton"> Bad-Minton
+    <input type="radio" name="que2" id="" value="carrom"> Carrom
+    <input type="radio" name="que2" id="" value="hockey"> Hockey
+
+    <h4>Q.3 What is the colour on Indian Flag?</h4>
+    <input type="radio" name="que3" id="" value="red"> Red
+    <input type="radio" name="que3" id="" value="pink"> Pink
+    <input type="radio" name="que3" id="" value="black">  Black
+    <input type="radio" name="que3" id="" value="white"> White
+
+    <h4>Q.4 What is fast food can be made in two minutes?</h4>
+    <input type="radio" name="que4" id="" value="maggie"> Maggie
+    <input type="radio" name="que4" id="" value="poha"> Poha
+    <input type="radio" name="que4" id="" value="upma"> Upma
+    <input type="radio" name="que4" id="" value="vadapaw"> Vada Pav
+
+    <h4>Q.5 Which Day is the start of a Weekdays?</h4>
+    <input type="radio" name="que5" id="" value="sunday"> Sunday
+    <input type="radio" name="que5" id="" value="monday"> Monday
+    <input type="radio" name="que5" id="" value="tuesday"> Tuesday
+    <input type="radio" name="que5" id="" value="wednesday"> Wednesday
+    <br><br>
+
+    <input type="button" style="padding: 10px;" value="Show Result" onclick="result()">
+    
+</form>
+
+    <script>
+
+        function result() {
+            var ans1 = document.question_paper.que1.value;
+    
+            var ans2 = document.question_paper.que2.value;
+
+            var ans3 = document.question_paper.que3.value;
+
+            var ans4 = document.question_paper.que4.value;
+
+            var ans5 = document.question_paper.que5.value;
+            
+            var marks = 0;
+
+            if(ans1 == "delhi"){
+                marks = marks +1;
+            }
+
+            if(ans2 == "hockey"){
+                marks = marks +1;
+            }
+
+            if(ans3 == "white"){
+                marks = marks +1;
+            }
+
+            if(ans4 == "maggie"){
+                marks = marks +1;
+            }
+
+            if(ans5 == "monday"){
+                marks = marks +1;
+            }
+            
+            
+            if(marks > 2){
+                document.write("<center><img src = 'minions.gif'><br>");
+
+                document.write("<h1>You Pass, Score " +marks+"</h1></center>");
+            }else{
+                document.write("<center><img src = 'fail.gif' ><br>");
+
+                document.write("<h1>You Fail, Score " +marks+"</h1></center>");
+
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
